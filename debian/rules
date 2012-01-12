@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Sample debian/rules that uses debhelper.
+# This file was originally written by Joey Hess and Craig Small.
+# As a special exception, when this file is copied by dh-make into a
+# dh-make output file, you may use that output file without restriction.
+# This special exception was added by Craig Small in version 0.37 of dh-make.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+%:
+	dh $@
+
+override_dh_install:
+	dh_install
+	mv debian/semplice-openbox-default-settings/etc/skel/xscreensaver debian/semplice-openbox-default-settings/etc/skel/.xscreensaver
+	mv debian/semplice-openbox-default-settings/etc/skel/gtkrc-2.0 debian/semplice-openbox-default-settings/etc/skel/.gtkrc-2.0
+	mv debian/semplice-openbox-default-settings/root/gtkrc-2.0 debian/semplice-openbox-default-settings/root/.gtkrc-2.0
+	mv debian/semplice-openbox-default-settings/var/lib/gdm3/gtkrc-2.0 debian/semplice-openbox-default-settings/var/lib/gdm3/.gtkrc-2.0

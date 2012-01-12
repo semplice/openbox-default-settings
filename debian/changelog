@@ -1,0 +1,500 @@
+semplice-openbox-default-settings (2.10.0) pulse; urgency=low
+
+  * Initial pulse release.
+  * panel/:
+    - removed: we do not ship fbpanel anymore.
+  * semplice-openbox-autostart: simplified, removed modes (only geeky remains),
+    configurable panel, configurable panel configuration, pcmanfm desktop
+    support, volume control can be disabled, removed xcompmgr references,
+    added live-relevant settings.
+  * openbox/:
+    - autostart.sh: renamed to autostart, removed live-relevant section,
+                    changed interval to 0.5, updated settings.
+    - removed xdg-menu.py and places.sh.
+  * tint2rc: ship to /etc/xdg/tint2/semplice.tint2rc.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Thu, 12 Jan 2012 21:25:58 +0100
+
+semplice-openbox-default-settings (2.0.0) emily; urgency=low
+
+  * GDM3: fixed default theme in greeter-conf.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 24 Dec 2011 10:48:04 +0100
+
+semplice-openbox-default-settings (1.14.5) emily; urgency=low
+
+  * Fixed Install action.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 10 Dec 2011 16:27:11 +0100
+
+semplice-openbox-default-settings (1.14.4) emily; urgency=low
+
+  * Fixed Applications menu in pcmanfm.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Thu, 08 Dec 2011 14:23:21 +0100
+
+semplice-openbox-default-settings (1.14.3) emily; urgency=low
+
+  * Fixed conky width.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Tue, 06 Dec 2011 15:16:24 +0100
+
+semplice-openbox-default-settings (1.14.2) emily; urgency=low
+
+  * debian/:
+    - gtk-3.0's settings.ini is conffile in /root and /var/lib/gdm3.
+    - Recommend gsimplecal.
+    - Ship gsimplecal stuff.
+  * gsimplecal/*
+    - Added gsimplecal configuration.
+  * tint2rc:
+    - Clock left-click to show gsimplecal.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sun, 04 Dec 2011 13:00:05 +0100
+
+semplice-openbox-default-settings (1.14.1) emily; urgency=low
+
+  * debian/:
+     - renamed dirs to match only semplice-openbox-default-settings;
+     - ship gtk-3.0/ to /etc/skel/.config, /root/.config and /var/lib/gdm3/.config;
+  * gtk-3.0/*:
+     - Added gtk3.0 settings.ini.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sun, 27 Nov 2011 21:11:11 +0100
+
+semplice-openbox-default-settings (1.14.0) emily; urgency=low
+
+  * semplice-openbox-autostart: autostart LXDE applications (closes LP: #877801)
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sun, 23 Oct 2011 11:25:08 +0200
+
+semplice-openbox-default-settings (1.13.0) emily; urgency=low
+
+  * Ship new policykit config.
+  * debian/control: updated Maintainer to match my new GPG key;
+                    Bumped to Standards-Version 3.9.2.
+  * semplice-openbox-autostart: various fixes.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Mon, 03 Oct 2011 13:21:54 +0200
+
+semplice-openbox-default-settings (1.11.3) emily; urgency=low
+
+  * Ability to disable conky (see autostart.sh)
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Sat, 25 Jun 2011 22:57:57 +0200
+
+semplice-openbox-default-settings (1.11.2) emily; urgency=low
+
+  * Various changes (xscreensaver, openbox, default mode now geeky, etc)
+  * Changed package name to semplice-openbox-default-settings, and ship
+    a dummy package for upgrade old semplice-default-settings.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Wed, 08 Jun 2011 21:32:39 +0200
+
+semplice-default-settings (1.11.1) emily; urgency=low
+
+  * Fixed openbox-autostart and autostart.sh.
+  * pcmanfm.conf: updated desktop wallpaper name.
+  * openbox: rc.xml: Window (active;inactive) font size is now 10.
+  * conky: semplice.conf: Switched to droid fonts; size 7.2
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Sat, 14 May 2011 23:17:22 +0200
+
+semplice-default-settings (1.11) emily; urgency=low
+
+  * openbox-autostart: make sure pcmanfm is started.
+  * Changed gtkrc, openbox rc.xml and menu.xml to match artwork and alan changes.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Thu, 12 May 2011 22:26:45 +0200
+
+semplice-default-settings (1.10.1) emily; urgency=low
+
+  * Fixed background path.
+  * control: Architecture: any -> all.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Sun, 24 Apr 2011 21:22:00 +0200
+
+semplice-default-settings (1.10.0) emily; urgency=low
+
+  * Development release:
+    * semplice-openbox-autostart:
+      - Splitted in bash functions
+      - Adds support to hybrid desktop (change enviroinment with a click!)
+      - locate_and_kill function that locates desidered processes for current
+        user and kills them
+    * openbox/autostart.sh:
+      - Included reference for "hybrid" desktop, that now it's the default.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Sat, 26 Mar 2011 20:41:46 +0100
+
+semplice-default-settings (1.0.1) rocks; urgency=low
+
+  * Release for rocks first point release (1.0.1):
+    * tint2rc:
+      - panel stays on top;
+      - panel size increased to 24;
+      - fixed tray size and ordination;
+      - less icon brightness for iconized windows on taskbar;
+      - other minor fixes.
+    * openbox/autostart.sh:
+      - removed references on conky + composite bug, it's fixed from RC2.
+    * openbox/menu.xml:
+      - branding changes: added header and "About Semplice..." item;
+      - added Settings pipe menu.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Fri, 28 Jan 2011 20:50:44 +0100
+
+semplice-default-settings (0.24) rocks; urgency=low
+
+  * policykit: Bumped file name of 1 number, otherwise will conflict with 51-debian-sudo.
+  * geeky mode: restart pcmanfm as daemon, bug fixed with the latest GIT snapshot.
+  * autostart.sh: fixed keyboard layout in "install" mode
+  * Ship "libfm" directory in ~/.config/, contains default applications to open links or mails.
+  * semplice-openbox-autostart: Fallback to simple mode instead of advanced mode.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Mon, 29 Nov 2010 16:58:43 +0100
+
+semplice-default-settings (0.23) rocks; urgency=low
+
+  * autostart.sh: fixed live mode change if install fails
+  * menu.xml: Removed "and Openbox" from the string "GTK+ and Openbox theme selector"
+    as we are not going to package lxappearance-obconf, at least for rocks.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Wed, 17 Nov 2010 15:59:15 +0100
+
+semplice-default-settings (0.22) unstable; urgency=low
+
+  * pcmanfm: config in default/pcmanfm.conf; follows new <profile>/conf rule in pcmanfm 0.9.8+
+  * top panel: using again pcmanfm ~, openhome.sh will ship anyway.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Tue, 16 Nov 2010 15:43:09 +0100
+
+semplice-default-settings (0.21) unstable; urgency=low
+
+  * Fixed wallpaper in "install" mode.
+  * Workaround openhome.sh to open home directory from fbpanel; ship in /usr/share/semplice-default-settings;
+  * Geeky mode scripts updated to use file:// syntax to open directories in pcmanfm.
+  * tint2rc: removed battery; we use xfce4-power-manager!
+  * openbox-autostart: sleep of interval even for notify-send call.; no pcmanfm daemon.
+  * pcmanfm: use gksu instead of gksudo.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Mon, 15 Nov 2010 15:31:59 +0100
+
+semplice-default-settings (0.20.5) unstable; urgency=low
+
+  * use /usr/share/laiv-setup/restartgdm to restart the display manager.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Mon, 25 Oct 2010 15:24:53 +0200
+
+semplice-default-settings (0.20.4) unstable; urgency=low
+
+  * Syncronized shutdown menu in geeky mode.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Thu, 21 Oct 2010 22:32:22 +0200
+
+semplice-default-settings (0.20.3) unstable; urgency=low
+
+  * Added GDM3/nitrogen.desktop to set wallpaper if gnome-session is not installed.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Thu, 21 Oct 2010 22:19:19 +0200
+
+semplice-default-settings (0.20.2) unstable; urgency=low
+
+  * Fixed autostart.sh to integrate with gdm3.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Thu, 21 Oct 2010 19:24:56 +0200
+
+semplice-default-settings (0.20.1) unstable; urgency=low
+
+  * Fixed some typos in postinst and prerm.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Thu, 21 Oct 2010 17:13:47 +0200
+
+semplice-default-settings (0.20) unstable; urgency=low
+
+  * Added GDM3 stuff
+  * Changed suspend and added hibernate icons in semplice-top panel.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Thu, 21 Oct 2010 16:07:38 +0200
+
+semplice-default-settings (0.19) unstable; urgency=low
+
+  * Do not ship anymore mimeapps.list.
+  * Interval (+1) too for composite.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Mon, 18 Oct 2010 15:56:54 +0200
+
+semplice-default-settings (0.18) unstable; urgency=low
+
+  * Added checktouchpad option in autostart. Default is "y".
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Thu, 07 Oct 2010 21:38:22 +0200
+
+semplice-default-settings (0.17) unstable; urgency=low
+
+  * Ship mimeapps.list;
+  * Fixed (?) sudo-mode;
+  * Removed references to my home directory in mirage/miragerc (FAIL! :D).
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Wed, 06 Oct 2010 18:15:58 +0200
+
+semplice-default-settings (0.16) unstable; urgency=low
+
+  * Ship new directory mirage/ in /etc/skel/.config
+  * Keyboard workaround in autostart.sh too for LIVEMODE = install
+  * Set sudo-mode at first start (uses ugly workaround to get if it is the first time or not, but should work...)
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Tue, 05 Oct 2010 16:08:21 +0200
+
+semplice-default-settings (0.15) unstable; urgency=low
+
+  * Added interval= option in autostart;
+  * Fixed laiv-installer-launcher path (/usr/sbin -> /usr/bin)
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Sat, 02 Oct 2010 18:11:34 +0200
+
+semplice-default-settings (0.14) unstable; urgency=low
+
+  * Using again live-installer if /etc/semplice-live-mode = install.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Tue, 28 Sep 2010 16:25:14 +0200
+
+semplice-default-settings (0.13) unstable; urgency=low
+
+  * Added again sleep while launching panels in semplice-openbox-autostart.
+  * Added PolicyKit rules to let users in group admin use policykit like sudo.
+  * Removed notify-osd things... notify-osd should be started by default in Beta1.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Mon, 27 Sep 2010 22:30:32 +0200
+
+semplice-default-settings (0.12-rocks1) unstable; urgency=low
+
+  * Added gnome-menus in Recommends;
+  * Replaced volwheel with volti in Recommends;
+  * Fixed places.sh;
+  * Added Wireless in conky config, thanks to Carmine Sorrentino <debianaro.posterous.com>;
+  * More settings in autostart.sh (and then semplice-openbox-autostart);
+  * Added touchpad support in semplice-openbox-autostart, thanks again to Carmine Sorrentino.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Wed, 08 Sep 2010 23:03:01 +0200
+
+semplice-default-settings (0.11-rocks1) unstable; urgency=low
+
+  * Install tint2 config in place.
+  * Added copyright informations about xdg-menu.py in debian/copyright - sorry:
+    I forget to do this before.
+  * Display now a cool warning if no mounted item/bookmark is found (places.sh)
+  * Added python-gmenu and tint2 in Recommends.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Thu, 02 Sep 2010 18:53:45 +0200
+
+semplice-default-settings (0.10-rocks1) unstable; urgency=low
+
+  * Install conky and openbox stuff.
+  * On-the-fly APT database rebuilding via autostart.sh
+  * Autostart conky and a dummy fbpanel config in geeky mode.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Wed, 25 Aug 2010 16:54:48 +0200
+
+semplice-default-settings (0.9.4-rocks1) unstable; urgency=low
+
+  * New bug-fixed release.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Sat, 31 Jul 2010 11:44:20 +0200
+
+semplice-default-settings (0.9.3-rocks1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Fri, 23 Jul 2010 16:13:22 +0200
+
+semplice-default-settings (0.9.2-rocks1) unstable; urgency=low
+
+  * Fixed the build problems
+  * New upstream release
+  * Added commands to install the nitrogen settings.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Wed, 21 Jul 2010 20:49:54 +0200
+
+semplice-default-settings (0.9.1-rocks2) UNRELEASED; urgency=low
+
+  * Fixed gtkrc-2.0 problem in the install file.
+  * Changed postinst to not return 1 if it fails to change the GDM theme.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Wed, 21 Jul 2010 19:52:14 +0200
+
+semplice-default-settings (0.9.1-rocks1) unstable; urgency=low
+
+  * New upstream release;
+  * Updated to Standards-Version 3.9.0;
+  * Changed to a minimal rules;
+  * Added source/format (3.0 (native)).
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Wed, 21 Jul 2010 15:54:42 +0200
+
+semplice-default-settings (0.9-rocks1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Mon, 21 Jun 2010 11:33:26 +0000
+
+semplice-default-settings (0.8.4-rocks1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Sun, 30 May 2010 15:41:44 +0000
+
+semplice-default-settings (0.8.3-rocks1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Thu, 27 May 2010 20:07:47 +0000
+
+semplice-default-settings (0.8.2-rocks1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Sat, 15 May 2010 21:56:13 +0000
+
+semplice-default-settings (0.8.1-rocks2) unstable; urgency=low
+
+  * Updated debian/postrm.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Sat, 06 Mar 2010 15:22:22 +0100
+
+semplice-default-settings (0.8.1-rocks1) unstable; urgency=low
+
+  * New upstream release.
+  * Changed debian/postinst, debian/dirs and debian/rules to install new gconf settings.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Mon, 01 Mar 2010 00:29:58 +0100
+
+semplice-default-settings (0.8-rocks1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Thu, 18 Feb 2010 20:04:11 +0100
+
+semplice-default-settings (0.7.3-rocks1) unstable; urgency=low
+
+  * New upstream release
+  * Changed debian/postinst to include changegdm on argument "semplice-live-configure".
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Sun, 31 Jan 2010 13:00:07 +0100
+
+semplice-default-settings (0.7.2-rocks1) unstable; urgency=low
+
+  * New upstream release
+  * Changed debian/postinst and debian/postrm.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Sat, 30 Jan 2010 15:06:22 +0100
+
+semplice-default-settings (0.7.1-rocks4) unstable; urgency=low
+
+  * Fixed, hopefully, debian/postinst.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Fri, 01 Jan 2010 01:41:24 +0100
+
+semplice-default-settings (0.7.1-rocks3) unstable; urgency=low
+
+  * Fixed, again, debian/postinst.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Fri, 01 Jan 2010 00:34:02 +0100
+
+semplice-default-settings (0.7.1-rocks2) unstable; urgency=low
+
+  * Fixed debian/postinst and debian/postrm.
+  * HAPPY NEW YEAR :)
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Thu, 31 Dec 2009 23:45:23 +0100
+
+semplice-default-settings (0.7.1-rocks1) unstable; urgency=low
+
+  * New upstream release
+  * Fixed debian/postinst and debian/postrm.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Thu, 31 Dec 2009 17:45:08 +0100
+
+semplice-default-settings (0.7-rocks1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Wed, 23 Dec 2009 16:44:33 +0100
+
+semplice-default-settings (0.6.4-rocks1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Sun, 06 Dec 2009 13:38:08 +0100
+
+semplice-default-settings (0.6.3-rocks1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Sat, 05 Dec 2009 16:30:46 +0100
+
+semplice-default-settings (0.6.2-rocks1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Mon, 30 Nov 2009 20:35:38 +0100
+
+semplice-default-settings (0.6.1-rocks1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Sat, 28 Nov 2009 22:22:06 +0100
+
+semplice-default-settings (0.6-rocks1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Fri, 27 Nov 2009 18:12:48 +0100
+
+semplice-default-settings (0.5-rocks1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Mon, 16 Nov 2009 15:20:58 +0100
+
+semplice-default-settings (0.4.2-rocks1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Sun, 15 Nov 2009 13:04:28 +0100
+
+semplice-default-settings (0.4.1-rocks1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Sat, 14 Nov 2009 22:18:48 +0100
+
+semplice-default-settings (0.4-rocks1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Sat, 14 Nov 2009 15:43:49 +0100
+
+semplice-default-settings (0.3-sparta1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Thu, 29 Oct 2009 17:16:31 +0100
+
+semplice-default-settings (0.2-sparta1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Thu, 29 Oct 2009 16:58:42 +0100
+
+semplice-default-settings (0.1-sparta2) unstable; urgency=low
+
+  * Fixed debian/rules.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Thu, 29 Oct 2009 15:19:51 +0100
+
+semplice-default-settings (0.1-sparta1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Eugenio (g7) <morarossa@gmail.com>  Thu, 29 Oct 2009 12:12:27 +0100

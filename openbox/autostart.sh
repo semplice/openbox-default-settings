@@ -1,0 +1,46 @@
+#!/bin/bash
+
+#
+# Openbox autostart script for Semplice Linux.
+# You can freely remove it to use a clean openbox session.
+# (C) 2009-2012 The Semplice Linux Team. All rights reserved.
+# Released under the terms of the GNU GPL v3 license (or later). See /usr/share/common-licenses/GPL.
+#
+
+#####################
+#### GENERAL SETTINGS
+
+# automagically detect touchpad, and if any, set fixtouchpad to "y". (You may set this to "n" and then fixtouchpad to anything you want)
+export checktouchpad="y"
+
+# Uncomment the following if you have problems with your touchpad, many thanks to Carmine Sorrentino <http://debianaro.posterous.com> for that!
+#export fixtouchpad="y"
+
+# interval for launch some applications (such as panel and volume control). Default is 2. (You can insert 0 to speed up login, if you have a good system):
+export interval="0.5"
+
+##############
+#### INTERFACE
+
+# conky configuration file, default is "/etc/conky/semplice.conf"
+# set to "disabled" to disable conky.
+#export conkyconf="/etc/conky/semplice.conf"
+export conkyconf="disabled"
+
+# volume control, default is "volti" ("disabled" to disable)
+export volcontrol="volti"
+
+# icons: set this variable to "y" to enable pcmanfm icons.
+# default is "n".
+export icons="n"
+
+# panel: the panel to launch. Default is "tint2".
+export panel="tint2"
+
+# panel configuration: the panel configuration file.
+# Please add the configuration parameter to specify the configuration file, if needed.
+# tint2 example: -c <configuration_file>
+# If empty, the autostart script will not pass anything.
+export panel_config="-c /etc/xdg/semplice.tint2rc"
+
+semplice-openbox-autostart &

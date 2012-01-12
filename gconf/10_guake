@@ -1,0 +1,12 @@
+/apps/guake/general/window_height 40
+/apps/guake/general/open_tab_cwd true
+/apps/guake/general/prompt_on_quit true
+/apps/guake/general/window_size 55
+/apps/guake/general/use_default_font true
+/apps/guake/general/scroll_keystroke true
+/apps/guake/general/history_size 1024
+/apps/guake/general/use_scrollbar true
+/apps/guake/general/window_tabbar true
+/apps/guake/general/window_losefocus false
+/apps/guake/general/use_popup false
+/apps/guake/general/use_trayicon false

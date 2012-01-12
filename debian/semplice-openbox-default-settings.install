@@ -1,0 +1,57 @@
+# Openbox stuff
+openbox/autostart.sh /etc/skel/.config/openbox
+openbox/menu.xml /etc/skel/.config/openbox
+openbox/rc.xml /etc/skel/.config/openbox
+
+openbox/places.sh /usr/share/semplice-default-settings/advanced
+openbox/xdg-menu.py /usr/share/semplice-default-settings/advanced
+
+# Conky stuff
+conky/semplice.conf /etc/conky
+conky/conky-fortune.py /usr/share/semplice-default-settings/advanced
+conky/conky-harddisks.sh /usr/share/semplice-default-settings/advanced
+
+# Panel stuff
+panel/* /usr/share/fbpanel
+
+# Advanced panel stuff
+tint2rc /etc/skel/.config/tint2
+
+# gsimplecal
+gsimplecal/ /etc/skel/.config
+
+# File Manager
+pcmanfm /etc/skel/.config
+libfm /etc/skel/.config
+
+# Mirage (image viewer)
+mirage /etc/skel/.config
+
+# Gconf - sigh! - settings
+gconf/* /usr/share/gconf/defaults
+
+# Cairo composite manager
+cairo-compmgr /etc/skel/.config
+
+# Nitrogen
+nitrogen /etc/skel/.config
+
+# Executables
+semplice-openbox-autostart /usr/bin
+openhome.sh /usr/share/semplice-default-settings
+
+# Other
+gtkrc-2.0 /etc/skel
+gtkrc-2.0 /root
+gtkrc-2.0 /var/lib/gdm3
+gtk-3.0 /etc/skel/.config
+gtk-3.0 /root/.config
+gtk-3.0 /var/lib/gdm3/.config
+xscreensaver /etc/skel
+#mimeapps.list /etc/skel/.local/share/applications
+GDM3/greeter.gconf-defaults /usr/share/semplice-default-settings/gdm
+GDM3/nitrogen.desktop /usr/share/gdm/autostart/LoginWindow
+
+# PolicyKit rules
+PolicyKit/52-allow-users-in-admin-group-to-use-policykit.conf /etc/polkit-1/localauthority.conf.d
+PolicyKit/53-allow-users-in-sudo-group-to-use-policykit.conf /etc/polkit-1/localauthority.conf.d

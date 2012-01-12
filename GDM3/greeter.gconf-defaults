@@ -1,0 +1,26 @@
+## SEMPLICE GDM3 DEFAULT SETTINGS
+
+# Use a specific background
+/desktop/gnome/background/picture_filename	/usr/share/images/desktop-base/semplice_gdm_background.png
+/desktop/gnome/background/picture_options	centered
+
+# Theming options
+## WARNING: Changing theme from here IF SEMPLICE OPENBOX SYSTEM will not change anything, because of gnome-settings-daemon missing.
+##          If you want to change theme, just edit /var/lib/gdm3/.gtkrc-2.0 .
+/desktop/gnome/interface/gtk_theme	SempliceDusk
+/desktop/gnome/interface/icon_theme	gnome-brave
+
+# Greeter options
+/apps/gdm/simple-greeter/logo_icon_name	go-down
+
+# Some other possible options
+/apps/gdm/simple-greeter/banner_message_enable	true
+/apps/gdm/simple-greeter/banner_message_text	Semplice Desktop
+#/apps/gdm/simple-greeter/disable_restart_buttons	false
+#/apps/gdm/simple-greeter/disable_user_list	false
+
+# The lower panel doesn't work with metacity's compositor
+/apps/metacity/general/compositing_manager	false
+
+# Prevent the power management icon from showing up
+/apps/gnome-power-manager/ui/icon_policy	never

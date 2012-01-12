@@ -1,0 +1,113 @@
+#!/bin/bash
+
+#
+# Openbox autostart script for Semplice Linux.
+# (C) 2009-2012 The Semplice Linux Team. All rights reserved.
+# Released under the terms of the GNU GPL v3 license (or later). See /usr/share/common-licenses/GPL.
+#
+
+### Set variables, if they are blank...
+
+[ -z "$icons" ] && icons="n"
+if [ "$icons" = "y" ]; then
+ pcmanfm_args="$pcmanfm_args --desktop"
+else
+ pcmanfm_args="$pcmanfm_args --desktop-off"
+fi
+
+[ -z "$volcontrol" ] && volcontrol="volti"
+[ -z "$conkyconf" ] && conkyconf="/etc/conky/semplice.conf"
+
+[ -z "$panel" ] && panel="tint2"
+# $panel_config can be blank.
+
+[ -z "$composite" ] && composite="n"
+[ -z "$usexcompmgr" ] && usexcompmgr="n"
+
+[ -z "$checktouchpad" ] && checktouchpad="y"
+[ -z "$fixtouchpad" ] && fixtouchpad="n"
+
+[ -z "$interval" ] && interval="2"
+
+if [ -e "/etc/semplice-live-mode" ]; then
+	export LIVEMODE="`cat /etc/semplice-live-mode`"
+fi
+
+### LIVE SYSTEM 
+
+# Fix keyboard, not useful in "yeahh", needed to fix layout in "install" (and, of course, needed by "nolock")
+
+if [ "$LIVEMODE" ]; then # The code below permits to resolve a "bug" in the live session in build 40 and higher.
+	. /etc/default/keyboard
+	if [[ "$XKBMODEL" ]]; then
+		setxkbmap $XKBLAYOUT -model $XKBMODEL
+	else
+		setxkbmap $XKBLAYOUT
+	fi
+fi
+
+if [ "$LIVEMODE" = "yeahh" ]; then
+	nitrogen --set-centered /usr/share/images/desktop-base/semplice_gdm_background.png
+	sudo /usr/bin/laiv_setup_gtk.py
+	sudo invoke-rc.d hal restart
+	sudo screen -A -m -d -S gdm3 nice /usr/share/laiv-setup/restartgdm
+elif [ "$LIVEMODE" = "install" ]; then
+	nitrogen --set-centered /usr/share/images/desktop-base/semplice_gdm_background.png
+	roxterm --hide-menubar -f -T "Install Semplice" -n "Semplice Live System Installer" -e /usr/bin/linstaller_wrapper.sh start
+	# If install fails, let the user choose: Or reboot or continue to boot the live system
+	semplice-logout --reboot-install
+	echo "nolock" | sudo tee /etc/semplice-live-mode
+fi
+
+[ "$LIVEMODE" = "yeahh" ] && exit 0 # All ends here if yeahh.
+
+### Ok, begin... ;-)
+
+# Workaround to get 'Applications' bookmark work in pcmanfm
+export XDG_MENU_PREFIX="gnome-"
+
+# Check if a touchpad is connected... checktouchpad="n" and fixtouchpad="y" forces this.
+if [ "$checktouchpad" = "y" ] && [ "`grep -i touchpad /proc/bus/input/devices`" ]; then
+	fixtouchpad="y"
+elif [ "$checktouchpad" = "y" ]; then
+	fixtouchpad="n"
+fi
+# Enable tap-to-click, many thanks to Carmine Sorrentino <http://debianaro.posterous.com> for that!
+if [ "$fixtouchpad" = "y" ]; then
+	synclient TapButton1=1
+	synclient TapButton2=2
+	synclient TapButton3=2
+	synclient VertTwoFingerScroll=1
+	synclient HorizTwoFingerScroll=1
+fi
+
+# Set nitrogen config...
+if [ -e "$HOME/.config/nitrogen/nitrogen.cfg.firststart" ]; then
+ echo "dirs=$HOME/.config/nitrogen/add-wallpaper;/usr/share/backgrounds;" >> $HOME/.config/nitrogen/nitrogen.cfg.firststart
+ mv $HOME/.config/nitrogen/nitrogen.cfg.firststart $HOME/.config/nitrogen/nitrogen.cfg
+fi
+
+# File Manager
+pcmanfm -d $pcmanfm_args &
+[ "$icons" = "n" ] && nitrogen --restore # If no icons, set wallpaper ourself.
+
+# Start panel, conky, volume control and composite manager
+(sleep $interval
+
+$panel $panel_config &
+[ "$conkyconf" != "disabled" ] && conky --config $conkyconf &
+
+[ "$volcontrol" != "disabled" ] && $volcontrol
+
+[ "$composite" = "y" ] && cairo-compmgr &
+) &
+
+if [ -z "$LIVEMODE" ]; then
+	xscreensaver &
+fi
+
+# Autostaring applications in /etc/xdg/autostart and ~/.config/autostart:
+xdg-autostart GNOME XFCE LXDE # XFCE is needed for xfce4-power manager, LXDE for lxrandr.
+	
+# And tell the user that all is OK! ;)
+notify-send -i config-users "Successfully logged in" "Welcome to your Semplice desktop, $USER!"

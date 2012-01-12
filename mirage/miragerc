@@ -1,0 +1,53 @@
+[window]
+statusbar = True
+h = 400
+thumbpane = False
+toolbar = True
+w = 600
+
+[prefs]
+savemode = 2
+bgcolor-red = 0
+zoomquality = 2
+slideshow_random = False
+slideshow_in_fullscreen = False
+open_all = True
+bgcolor-green = 0
+quality_save = 90
+thumbsize = 128
+hidden = False
+preloading_images = False
+screenshot_delay = 2
+simple-bgcolor = False
+listwrap_mode = 0
+start_in_fullscreen = False
+last_mode = 0
+bgcolor-blue = 0
+open_mode = 0
+slideshow_delay = 1
+use_last_dir = False
+disable_screensaver = False
+confirm_delete = True
+
+[actions]
+shortcuts[3] = <Control><Alt>f
+commands[2] = convert %F -thumbnail 150x150 %Pt_%N.jpg
+commands[3] = mkdir -p ~/mirage-favs; mv %F ~/mirage-favs; [NEXT]
+names[3] = Move to Favorites
+batch[2] = True
+names[1] = Create Thumbnail
+names[0] = Open in GIMP
+names[2] = Create Thumbnails
+commands[0] = gimp %F &
+commands[1] = convert %F -thumbnail 150x150 %Pt_%N.jpg
+num_actions = 4
+shortcuts[0] = <Control>e
+shortcuts[1] = <Alt>t
+batch[3] = False
+batch[1] = False
+batch[0] = False
+shortcuts[2] = <Control><Alt>t
+
+[recent]
+num_recent = 0
+

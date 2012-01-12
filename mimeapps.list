@@ -1,0 +1,21 @@
+
+[Default Applications]
+image/x-sun-raster=mirage.desktop
+image/pjpeg=mirage.desktop
+image/svg+xml=mirage.desktop
+image/jpeg=mirage.desktop
+image/x-tga=mirage.desktop
+image/x-portable-pixmap=mirage.desktop
+image/x-portable-bitmap=mirage.desktop
+image/gif=mirage.desktop
+image/jpg=mirage.desktop
+image/x-pcx=mirage.desktop
+image/tiff=mirage.desktop
+image/x-xpixmap=mirage.desktop
+image/x-xbitmap=mirage.desktop
+image/x-bmp=mirage.desktop
+image/x-portable-anymap=mirage.desktop
+image/x-png=mirage.desktop
+image/bmp=mirage.desktop
+image/x-portable-graymap=mirage.desktop
+image/png=mirage.desktop
