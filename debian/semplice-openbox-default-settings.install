@@ -1,10 +1,7 @@
 # Openbox stuff
-openbox/autostart.sh /etc/skel/.config/openbox
+openbox/autostart /etc/skel/.config/openbox
 openbox/menu.xml /etc/skel/.config/openbox
 openbox/rc.xml /etc/skel/.config/openbox
-
-openbox/places.sh /usr/share/semplice-default-settings/advanced
-openbox/xdg-menu.py /usr/share/semplice-default-settings/advanced
 
 # Conky stuff
 conky/semplice.conf /etc/conky
@@ -12,10 +9,7 @@ conky/conky-fortune.py /usr/share/semplice-default-settings/advanced
 conky/conky-harddisks.sh /usr/share/semplice-default-settings/advanced
 
 # Panel stuff
-panel/* /usr/share/fbpanel
-
-# Advanced panel stuff
-tint2rc /etc/skel/.config/tint2
+tint2rc /etc/xdg/tint2/semplice.tint2rc
 
 # gsimplecal
 gsimplecal/ /etc/skel/.config

@@ -1,9 +1,10 @@
 /etc/skel
 /etc/skel/.config
 /etc/skel/.config/openbox
-/etc/skel/.config/tint2
 /etc/skel/.local/share/applications
 /etc/skel/Desktop
+
+/etc/xdg/tint2
 
 /etc/polkit-1/localauthority.conf.d/
 
@@ -12,8 +13,6 @@
 /usr/share/semplice-default-settings
 /usr/share/semplice-default-settings/advanced
 /usr/share/semplice-default-settings/gdm
-
-/usr/share/fbpanel
 
 /etc/conky
 
