@@ -1,3 +1,9 @@
+semplice-openbox-default-settings (2.10.1) pulse; urgency=low
+
+  * Really move autostart.sh to autostart.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Thu, 12 Jan 2012 21:54:30 +0100
+
 semplice-openbox-default-settings (2.10.0) pulse; urgency=low
 
   * Initial pulse release.
