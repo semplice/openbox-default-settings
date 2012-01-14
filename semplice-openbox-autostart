@@ -22,7 +22,6 @@ fi
 # $panel_config can be blank.
 
 [ -z "$composite" ] && composite="n"
-[ -z "$usexcompmgr" ] && usexcompmgr="n"
 
 [ -z "$checktouchpad" ] && checktouchpad="y"
 [ -z "$fixtouchpad" ] && fixtouchpad="n"

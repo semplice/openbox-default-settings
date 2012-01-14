@@ -9,7 +9,7 @@ conky/conky-fortune.py /usr/share/semplice-default-settings/advanced
 conky/conky-harddisks.sh /usr/share/semplice-default-settings/advanced
 
 # Panel stuff
-tint2rc /etc/xdg/tint2/semplice.tint2rc
+tint2rc /etc/xdg/tint2
 
 # gsimplecal
 gsimplecal/ /etc/skel/.config

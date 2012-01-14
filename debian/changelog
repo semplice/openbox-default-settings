@@ -1,3 +1,10 @@
+semplice-openbox-default-settings (2.10.2) pulse; urgency=low
+
+  * debian/: fixed tint2rc install
+  * semplice-openbox-autostart: removed references to xcompmgr
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 14 Jan 2012 21:50:35 +0100
+
 semplice-openbox-default-settings (2.10.1) pulse; urgency=low
 
   * Really move autostart.sh to autostart.
