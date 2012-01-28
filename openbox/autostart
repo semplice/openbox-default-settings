@@ -41,6 +41,6 @@ export panel="tint2"
 # Please add the configuration parameter to specify the configuration file, if needed.
 # tint2 example: -c <configuration_file>
 # If empty, the autostart script will not pass anything.
-export panel_config="-c /etc/xdg/semplice.tint2rc"
+export panel_config="-c /etc/xdg/tint2/semplice.tint2rc"
 
 semplice-openbox-autostart &
