@@ -1,0 +1,5 @@
+[global]
+toggle = mute
+icon_theme = Default
+keys_backend = xlib
+show_notify = 1
