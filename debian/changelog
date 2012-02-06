@@ -1,3 +1,9 @@
+semplice-openbox-default-settings (2.10.6) pulse; urgency=low
+
+  * semplice-openbox-autostart: Workaround to get notify-osd work.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Mon, 06 Feb 2012 22:18:36 +0100
+
 semplice-openbox-default-settings (2.10.5) pulse; urgency=low
 
   * debian/: do not ship volti configuration, some problems with it.
