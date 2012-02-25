@@ -90,6 +90,7 @@ if [ "$fixtouchpad" = "y" ]; then
 	synclient TapButton3=2
 	synclient VertTwoFingerScroll=1
 	synclient HorizTwoFingerScroll=1
+	synclient VertEdgeScroll=1
 fi
 
 # Set nitrogen config...

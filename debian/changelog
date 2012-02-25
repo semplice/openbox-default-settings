@@ -1,3 +1,9 @@
+semplice-openbox-default-settings (2.10.7) pulse; urgency=low
+
+  * semplice-openbox-autostart: enable VertEdgeScroll in touchpad.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 25 Feb 2012 20:47:34 +0100
+
 semplice-openbox-default-settings (2.10.6) pulse; urgency=low
 
   * semplice-openbox-autostart: Workaround to get notify-osd work.
