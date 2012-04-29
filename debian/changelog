@@ -1,3 +1,10 @@
+semplice-openbox-default-settings (2.12.0) pulse; urgency=low
+
+  * Initial lightdm support.
+  * Launch xscreensaver in live mode, too.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sun, 29 Apr 2012 17:33:49 +0200
+
 semplice-openbox-default-settings (2.10.8) pulse; urgency=low
 
   * libfm: added libfm.conf.

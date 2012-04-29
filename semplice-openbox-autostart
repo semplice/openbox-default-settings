@@ -49,7 +49,7 @@ if [ "$LIVEMODE" = "yeahh" ]; then
 	nitrogen --set-centered /usr/share/images/desktop-base/semplice_gdm_background.png
 	sudo /usr/bin/laiv_setup_gtk.py
 	sudo invoke-rc.d hal restart
-	sudo screen -A -m -d -S gdm3 nice /usr/share/laiv-setup/restartgdm
+	sudo screen -A -m -d -S gdm3 nice /usr/share/laiv-setup/restartgdm lightdm
 elif [ "$LIVEMODE" = "install" ]; then
 	nitrogen --set-centered /usr/share/images/desktop-base/semplice_gdm_background.png
 	roxterm --hide-menubar -f -T "Install Semplice" -n "Semplice Live System Installer" -e /usr/bin/linstaller_wrapper.sh start
@@ -114,9 +114,7 @@ $panel $panel_config &
 [ "$composite" = "y" ] && cairo-compmgr &
 ) &
 
-if [ -z "$LIVEMODE" ]; then
-	xscreensaver &
-fi
+xscreensaver &
 
 # Autostaring applications in /etc/xdg/autostart and ~/.config/autostart:
 xdg-autostart GNOME XFCE LXDE # XFCE is needed for xfce4-power manager, LXDE for lxrandr.
