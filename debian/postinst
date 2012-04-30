@@ -74,6 +74,8 @@ changelightdm() {
 	echo "Done."
 	invoke-rc.d lightdm reload
 
+}
+
 case "$1" in
     configure)
 	if [ -z "$2" ]; then
