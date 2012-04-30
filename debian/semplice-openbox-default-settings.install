@@ -47,6 +47,9 @@ GDM3/greeter.gconf-defaults /usr/share/semplice-default-settings/gdm
 GDM3/nitrogen.desktop /usr/share/gdm/autostart/LoginWindow
 #volti /etc/skel/.config
 
+# Lightdm
+lightdm/* /usr/share/semplice-default-settings/lightdm
+
 # PolicyKit rules
 PolicyKit/52-allow-users-in-admin-group-to-use-policykit.conf /etc/polkit-1/localauthority.conf.d
 PolicyKit/53-allow-users-in-sudo-group-to-use-policykit.conf /etc/polkit-1/localauthority.conf.d

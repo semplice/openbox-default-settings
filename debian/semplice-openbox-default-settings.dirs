@@ -13,6 +13,7 @@
 /usr/share/semplice-default-settings
 /usr/share/semplice-default-settings/advanced
 /usr/share/semplice-default-settings/gdm
+/usr/share/semplice-default-settings/lightdm
 
 /etc/conky
 

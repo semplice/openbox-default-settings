@@ -57,21 +57,40 @@ changegdm3() {
 	echo "Done."
 	invoke-rc.d gdm3 reload
 }
+
+changelightdm() {
+	echo -n "Changing lightdm configuration... "
+	# Backup the old configs
+	mv /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.semplicebackup
+	mv /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf.semplicebackup
+	# Copy the new ones
+	cp /usr/share/semplice-default-settings/lightdm/*.conf /etc/lightdm
+	if [ "$?" != "0" ]; then
+		echo "Failed."
+		echo "W: Failed to change lightdm Configuration."
+		return 0
+	fi
 	
+	echo "Done."
+	invoke-rc.d lightdm reload
 
 case "$1" in
     configure)
 	if [ -z "$2" ]; then
 	 [ -e "/etc/gdm/gdm.conf" ] && changegdm
 	 [ -e "/etc/gdm3/greeter.gconf-defaults" ] && changegdm3
+	 [ -e "/etc/lightdm/lightdm.conf" ] && changelightdm
 	fi
+
+	# If upgrading from emily, we need to setup lightdm...
+	[ "$2" ] && [ ! -e "/etc/lightdm/lightdm.conf.semplicebackup" ] && changelightdm
 
 	if [ "`which update-gconf-defaults`" ]; then
 	 update-gconf-defaults
 	fi
     ;;
     semplice-live-configure)
-	changegdm3;;
+	changelightdm;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
     ;;

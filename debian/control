@@ -8,7 +8,7 @@ Homepage: http://launchpad.net/semplice
 
 Package: semplice-openbox-default-settings
 Architecture: all
-Depends: bash
+Depends: bash, lightdm, lightdm-gtk-greeter
 Recommends: openbox, volti, notify-osd, pcmanfm, cairo-compmgr, libnotify-bin, semplice-utilities, semplice-artwork, nitrogen, semplice-artwork, conky, tint2, python-gmenu, gnome-menus, gsimplecal
 Description: Semplice Openbox System Default Settings
  This package contains the default settings for the

@@ -56,10 +56,45 @@ changegdm3() {
 	invoke-rc.d gdm3 reload
 }
 
+changelightdm() {
+	echo -n "Restoring old lightdm Configuration... "
+	# Get md5sums of our config and user's...
+	md51="`md5sum /usr/share/semplice-default-settings/lightdm/lightdm.conf | cut -d \" \" -f1`"
+	md52="`md5sum /etc/lightdm/lightdm.conf | cut -d \" \" -f1`"
+	if [ "$md51" = "$md52" ]; then
+		# lightdm config not touched by user; we can safely restore the older.
+		rm /etc/lightdm/lightdm.conf
+		mv /etc/lightdm/lightdm.conf.semplicebackup /etc/lightdm/lightdm.conf 
+		[ "$?" != "0" ] && echo "Failed."
+	else
+		# GDM config changed by someone. Leave it untouched.
+		echo "Modified by user; leaved untouched."
+	fi
+	
+	# Get md5sums of our config and user's...
+	md51="`md5sum /usr/share/semplice-default-settings/lightdm/lightdm-gtk-greeter.conf | cut -d \" \" -f1`"
+	md52="`md5sum /etc/lightdm/lightdm-gtk-greeter.conf | cut -d \" \" -f1`"
+	if [ "$md51" = "$md52" ]; then
+		# lightdm config not touched by user; we can safely restore the older.
+		rm /etc/lightdm/lightdm-gtk-greeter.conf
+		mv /etc/lightdm/lightdm-gtk-greeter.conf.semplicebackup /etc/lightdm/lightdm-gtk-greeter.conf 
+		[ "$?" != "0" ] && echo "Failed."
+	else
+		# GDM config changed by someone. Leave it untouched.
+		echo "Modified by user; leaved untouched."
+	fi
+
+
+	invoke-rc.d lightdm reload
+}
+
+
 case "$1" in
     purge|remove|failed-upgrade|abort-install|abort-upgrade|disappear)
     [ -e "/etc/gdm/gdm.conf" ] && changegdm
     [ -e "/etc/gdm3/greeter.gconf-defaults.semplicebackup" ] && changegdm3
+    [ -e "/etc/lightdm/lightdm.conf.semplicebackup" ] && changelightdm
+
 
     if [ "`which update-gconf-defaults`" ]; then
      update-gconf-defaults
