@@ -99,10 +99,6 @@ if [ -e "$HOME/.config/nitrogen/nitrogen.cfg.firststart" ]; then
  mv $HOME/.config/nitrogen/nitrogen.cfg.firststart $HOME/.config/nitrogen/nitrogen.cfg
 fi
 
-# File Manager
-pcmanfm -d $pcmanfm_args &
-[ "$icons" = "n" ] && nitrogen --restore # If no icons, set wallpaper ourself.
-
 # Start panel, conky, volume control and composite manager
 (sleep $interval
 
@@ -118,6 +114,10 @@ xscreensaver &
 
 # Autostaring applications in /etc/xdg/autostart and ~/.config/autostart:
 xdg-autostart GNOME XFCE LXDE # XFCE is needed for xfce4-power manager, LXDE for lxrandr.
-	
+
+# File Manager
+pcmanfm -d $pcmanfm_args &
+[ "$icons" = "n" ] && nitrogen --restore # If no icons, set wallpaper ourself.
+
 # And tell the user that all is OK! ;)
 notify-send -i config-users "Successfully logged in" "Welcome to your Semplice desktop, $USER!"
