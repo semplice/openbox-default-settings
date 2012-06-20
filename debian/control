@@ -16,12 +16,3 @@ Description: Semplice Openbox System Default Settings
  .
  This package not touch current user's settings, and
  is valid only for new users.
-
-Package: semplice-default-settings
-Architecture: all
-Depends: semplice-openbox-default-settings
-Description: Dummy transitional package to semplice-openbox-default-settings
- This package is used to make a smooth transition to the new
- default settings package, semplice-openbox-default-settings.
- .
- Feel free to remove it.
