@@ -58,7 +58,7 @@ elif [ "$LIVEMODE" = "install" ]; then
 	echo "nolock" | sudo tee /etc/semplice-live-mode
 elif [ "$LIVEMODE" = "install-raspberrypi" ]; then
 	nitrogen --set-centered /usr/share/images/desktop-base/semplice_gdm_background.png
-	roxterm --hide-menubar -f -T "Install Semplice" -n "Semplice Live System Installer" -e /usr/bin/linstaller_wrapper.sh start
+	roxterm --hide-menubar -f -T "Install Semplice" -n "Semplice Live System Installer" -e /usr/bin/linstaller_wrapper.sh start -c=semplice-raspberrypi
 	sudo reboot
 fi
 
