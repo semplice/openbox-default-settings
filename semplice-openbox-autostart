@@ -56,6 +56,10 @@ elif [ "$LIVEMODE" = "install" ]; then
 	# If install fails, let the user choose: Or reboot or continue to boot the live system
 	semplice-logout --reboot-install
 	echo "nolock" | sudo tee /etc/semplice-live-mode
+elif [ "$LIVEMODE" = "install-raspberrypi" ]; then
+	nitrogen --set-centered /usr/share/images/desktop-base/semplice_gdm_background.png
+	roxterm --hide-menubar -f -T "Install Semplice" -n "Semplice Live System Installer" -e /usr/bin/linstaller_wrapper.sh start
+	sudo reboot
 fi
 
 [ "$LIVEMODE" = "yeahh" ] && exit 0 # All ends here if yeahh.
