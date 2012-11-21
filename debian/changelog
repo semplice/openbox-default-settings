@@ -1,3 +1,9 @@
+semplice-openbox-default-settings (2.90.1) pulse; urgency=low
+
+  * pcmanfm: fix side pane.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Wed, 21 Nov 2012 20:18:31 +0100
+
 semplice-openbox-default-settings (2.90.0) pulse; urgency=low
 
   * semplice-openbox-autostart: launch crash wrapper instead of the stock installer,
