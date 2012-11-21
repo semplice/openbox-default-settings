@@ -24,8 +24,8 @@ mirage /etc/skel/.config
 # Gconf - sigh! - settings
 gconf/* /usr/share/gconf/defaults
 
-# Cairo composite manager
-cairo-compmgr /etc/skel/.config
+# Xfce4 applications settings
+xfce4 /etc/skel/.config
 
 # Nitrogen
 nitrogen /etc/skel/.config

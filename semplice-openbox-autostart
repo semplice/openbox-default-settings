@@ -53,14 +53,14 @@ if [ "$LIVEMODE" = "yeahh" ]; then
 elif [ "$LIVEMODE" = "install" ]; then
 	nitrogen --set-centered /usr/share/images/desktop-base/semplice_gdm_background.png
 	#roxterm --hide-menubar -f -T "Install Semplice" -n "Semplice Live System Installer" -e /usr/bin/linstaller_wrapper.sh start
-	/usr/bin/linstaller start -f=glade # use GUI
+	/usr/bin/linstaller_crash_wrapper.sh start -f=glade # use GUI
 	# If install fails, let the user choose: Or reboot or continue to boot the live system
 	semplice-logout --reboot-install
 	echo "nolock" | sudo tee /etc/semplice-live-mode
 elif [ "$LIVEMODE" = "install-raspberrypi" ]; then
 	nitrogen --set-centered /usr/share/images/desktop-base/semplice_gdm_background.png
 	#roxterm --hide-menubar -f -T "Install Semplice" -n "Semplice Live System Installer" -e /usr/bin/linstaller_wrapper.sh start -c=semplice-raspberrypi
-	/usr/bin/linstaller start -c=semplice-raspberrypi -f=glade # use GUI
+	/usr/bin/linstaller_crash_wrapper.sh start -c=semplice-raspberrypi -f=glade # use GUI
 	sudo reboot
 fi
 
@@ -71,16 +71,27 @@ fi
 # Workaround to get 'Applications' bookmark work in pcmanfm
 export XDG_MENU_PREFIX="gnome-"
 
-## WORKAROUND TO GET NOTIFICATIONS WORKING:
+## OLD WORKAROUND TO GET NOTIFICATIONS WORKING:
 # An update to notification-daemon dropped the old way to launch it (via dbus) in favour of a XDG .desktop autostart way.
 # This forces semplice (openbox-xdg-autostart in fact, which is started before this script and it's not controlled by us) to launch notification-daemon.
 # This means that the fancy notifications (notify-osd) are not started.
 # Boxes who have xfce4-notify will not get it started starting from semplice-utilities 2.10.4.
 #
 # We should *KILL* (yeah, kill) the notification-daemon.
-kill -9 `pidof /usr/lib/notification-daemon/notification-daemon`
+#kill -9 `pidof /usr/lib/notification-daemon/notification-daemon`
 # And then start notify-osd.
-/usr/lib/notify-osd/notify-osd &
+#/usr/lib/notify-osd/notify-osd &
+## END OF WORKAROUND
+
+## NEW WORKAROUND TO GET NOTIFICATIONS WORKING:
+# As of Semplice 3.0 RC1, we are now using xfce4-notifyd. It should be launched automatically via dbus, but we need
+# before to kill notification-daemon if it is runnng.
+#
+NOTIPID="`pidof /usr/lib/notification-daemon/notification-daemon`"
+if [ $NOTIPID ]; then
+	kill -9 $NOTIPID
+fi
+#
 ## END OF WORKAROUND
 
 # Check if a touchpad is connected... checktouchpad="n" and fixtouchpad="y" forces this.
@@ -126,4 +137,4 @@ pcmanfm -d $pcmanfm_args &
 [ "$icons" = "n" ] && nitrogen --restore # If no icons, set wallpaper ourself.
 
 # And tell the user that all is OK! ;)
-notify-send -i config-users "Successfully logged in" "Welcome to your Semplice desktop, $USER!"
+#notify-send -i config-users "Successfully logged in" "Welcome to your Semplice desktop, $USER!"

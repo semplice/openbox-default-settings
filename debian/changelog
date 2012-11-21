@@ -1,3 +1,12 @@
+semplice-openbox-default-settings (2.90.0) pulse; urgency=low
+
+  * semplice-openbox-autostart: launch crash wrapper instead of the stock installer,
+                                revamped notification workaround,
+                                do not display the "logged in successfully" notification anymore.
+  * xfce4/: added (xfce4-notifyd).
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Wed, 21 Nov 2012 17:14:34 +0100
+
 semplice-openbox-default-settings (2.13.4) pulse; urgency=low
 
   * semplice-openbox-autostart: run GUI too in raspberrypi; do not use the linstaller_wrapper anymore.
