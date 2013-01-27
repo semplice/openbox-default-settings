@@ -17,82 +17,27 @@
 # for details, see http://www.debian.org/doc/debian-policy/ or
 # the debian-policy package
 
-
-changegdm() {
-
-echo -n "Changing GDM Theme... "
-
-graphicaltheme="`grep \"GraphicalTheme=\" /etc/gdm/gdm.conf`"
-if [ "$graphicaltheme" ]; then
- sed -i s/"$graphicaltheme"/"GraphicalTheme=semplice"/ /etc/gdm/gdm.conf
-else
- sed -i s/"\[greeter\]"/"\[greeter\]\nGraphicalTheme=semplice"/ /etc/gdm/gdm.conf
-fi
-
-if [ "$?" != "0" ]; then
- echo "Failed."
- #exit 1
- echo "W: Failed to change GDM Theme."
- return 0
-fi
-
-echo "Done."
-
-invoke-rc.d gdm reload
-
-}
-
-changegdm3() {
-	echo -n "Changing GDM3 Configuration... "
-	# Backup the old config
-	mv /etc/gdm3/greeter.gconf-defaults /etc/gdm3/greeter.gconf-defaults.semplicebackup
-	# Copy the new one
-	cp /usr/share/semplice-default-settings/gdm/greeter.gconf-defaults /etc/gdm3/greeter.gconf-defaults
-	if [ "$?" != "0" ]; then
-		echo "Failed."
-		echo "W: Failed to change GDM Configuration."
-		return 0
+configure() {
+	# Divert lightdm configurations
+	if ! [ -e "/etc/lightdm/lightdm.conf.distrib" ]; then
+		dpkg-divert --rename --package semplice-openbox-default-settings --divert "/etc/lightdm/lightdm.conf.distrib" --add "/etc/lightdm/lightdm.conf"
+		cp /usr/share/semplice-default-settings/lightdm/lightdm.conf /etc/lightdm
 	fi
-	
-	echo "Done."
-	invoke-rc.d gdm3 reload
-}
-
-changelightdm() {
-	echo -n "Changing lightdm configuration... "
-	# Backup the old configs
-	mv /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.semplicebackup
-	mv /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf.semplicebackup
-	# Copy the new ones
-	cp /usr/share/semplice-default-settings/lightdm/*.conf /etc/lightdm
-	if [ "$?" != "0" ]; then
-		echo "Failed."
-		echo "W: Failed to change lightdm Configuration."
-		return 0
+	if ! [ -e "/etc/lightdm/lightdm-gtk-greeter.conf.distrib" ]; then
+		dpkg-divert --rename --package semplice-openbox-default-settings --divert "/etc/lightdm/lightdm-gtk-greeter.conf.distrib" --add "/etc/lightdm/lightdm-gtk-greeter.conf"
+		cp /usr/share/semplice-default-settings/lightdm/lightdm-gtk-greeter.conf /etc/lightdm
 	fi
-	
-	echo "Done."
 	invoke-rc.d lightdm reload
-
-}
-
-case "$1" in
-    configure)
-	if [ -z "$2" ]; then
-	 [ -e "/etc/gdm/gdm.conf" ] && changegdm
-	 [ -e "/etc/gdm3/greeter.gconf-defaults" ] && changegdm3
-	 [ -e "/etc/lightdm/lightdm.conf" ] && changelightdm
-	fi
-
-	# If upgrading from emily, we need to setup lightdm...
-	[ "$2" ] && [ ! -e "/etc/lightdm/lightdm.conf.semplicebackup" ] && changelightdm
-
+	
+	# Update gconf defaults
 	if [ "`which update-gconf-defaults`" ]; then
 	 update-gconf-defaults
 	fi
-    ;;
-    semplice-live-configure)
-	changelightdm;;
+}
+
+case "$1" in
+    configure|semplice-live-configure)
+	configure;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
     ;;
