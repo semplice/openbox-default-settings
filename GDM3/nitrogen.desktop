@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Nitrogen (set wallpaper)
-TryExec=nitrogen
-Exec=nitrogen --set-centered /usr/share/images/desktop-base/semplice_gdm_background.png
-OnlyShowIn=GNOME;
-X-GNOME-Autostart-Phase=Initialization
-X-GNOME-Autostart-Notify=true
-X-GNOME-AutoRestart=true

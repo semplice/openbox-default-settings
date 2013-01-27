@@ -12,14 +12,10 @@
 
 /usr/share/semplice-default-settings
 /usr/share/semplice-default-settings/advanced
-/usr/share/semplice-default-settings/gdm
 /usr/share/semplice-default-settings/lightdm
 
 /etc/conky
 
 /usr/bin
-
-/var/lib/gdm3/.config
-/usr/share/gdm/autostart/LoginWindow
 
 /root/.config
