@@ -1,3 +1,9 @@
+semplice-openbox-default-settings (3.99.2) unstable; urgency=low
+
+  * Removed references to GDM3 from debian/conffiles.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Tue, 12 Feb 2013 22:10:33 +0100
+
 semplice-openbox-default-settings (3.99.1) unstable; urgency=low
 
   * Do not ship PolicyKit files anymore.
