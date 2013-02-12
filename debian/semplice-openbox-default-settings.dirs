@@ -6,7 +6,7 @@
 
 /etc/xdg/tint2
 
-/etc/polkit-1/localauthority.conf.d/
+#/etc/polkit-1/localauthority.conf.d/
 
 /usr/share/gconf/defaults
 
