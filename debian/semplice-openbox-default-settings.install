@@ -41,7 +41,7 @@ gtk-3.0 /etc/skel/.config
 gtk-3.0 /root/.config
 xscreensaver /etc/skel
 #mimeapps.list /etc/skel/.local/share/applications
-#volti /etc/skel/.config
+volumeicon /etc/skel/.config
 
 # Lightdm
 lightdm/* /usr/share/semplice-default-settings/lightdm
