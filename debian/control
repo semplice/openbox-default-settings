@@ -4,12 +4,11 @@ Priority: optional
 Maintainer: Eugenio Paolantonio (g7) <me@medesimo.eu>
 Build-Depends: debhelper (>= 7.0.50~)
 Standards-Version: 3.9.2
-Homepage: http://launchpad.net/semplice
+Homepage: http://semplice-linux.org
 
 Package: semplice-openbox-default-settings
 Architecture: all
-Depends: bash, lightdm, lightdm-gtk-greeter
-Recommends: openbox, volti, notify-osd, pcmanfm, cairo-compmgr, libnotify-bin, semplice-utilities, semplice-artwork, nitrogen, semplice-artwork, conky, tint2, python-gmenu, gnome-menus, gsimplecal
+Pre-Depends: bash, lightdm, lightdm-gtk-greeter
 Description: Semplice Openbox System Default Settings
  This package contains the default settings for the
  Semplice Openbox System.
