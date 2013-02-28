@@ -1,3 +1,10 @@
+semplice-openbox-default-settings (3.99.3) unstable; urgency=low
+
+  * Auto-launch compton if composite is enabled.
+  * Added clipit configuration.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Thu, 28 Feb 2013 16:36:04 +0100
+
 semplice-openbox-default-settings (3.99.2) unstable; urgency=low
 
   * Removed references to GDM3 from debian/conffiles.
