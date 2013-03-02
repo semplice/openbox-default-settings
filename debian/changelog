@@ -1,3 +1,9 @@
+semplice-openbox-default-settings (3.99.5) unstable; urgency=low
+
+  * Fixed compton autostart.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 02 Mar 2013 19:42:57 +0100
+
 semplice-openbox-default-settings (3.99.4) unstable; urgency=low
 
   * gtk*: set Faenza-Semplice as the default icon theme.
