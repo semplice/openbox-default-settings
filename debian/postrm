@@ -28,7 +28,7 @@ remove() {
 		rm -f /etc/lightdm/lightdm-gtk-greeter.conf
 		dpkg-divert --rename --package semplice-openbox-default-settings --divert "/etc/lightdm/lightdm-gtk-greeter.conf.distrib" --remove "/etc/lightdm/lightdm-gtk-greeter.conf"
 	fi
-	invoke-rc.d lightdm reload
+	#invoke-rc.d lightdm reload
 	
 	# Update gconf defaults
 	if [ "`which update-gconf-defaults`" ]; then

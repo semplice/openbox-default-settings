@@ -27,7 +27,7 @@ configure() {
 		dpkg-divert --rename --package semplice-openbox-default-settings --divert "/etc/lightdm/lightdm-gtk-greeter.conf.distrib" --add "/etc/lightdm/lightdm-gtk-greeter.conf"
 		cp /usr/share/semplice-default-settings/lightdm/lightdm-gtk-greeter.conf /etc/lightdm
 	fi
-	invoke-rc.d lightdm reload
+	#invoke-rc.d lightdm reload
 	
 	# Update gconf defaults
 	if [ "`which update-gconf-defaults`" ]; then

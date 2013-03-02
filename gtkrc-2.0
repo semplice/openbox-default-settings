@@ -2,7 +2,7 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 gtk-theme-name="SempliceNight"
-gtk-icon-theme-name="gnome-brave"
+gtk-icon-theme-name="Faenza-Semplice"
 gtk-font-name="Droid Sans 10"
 gtk-cursor-theme-name="DMZ-White"
 gtk-cursor-theme-size=24
