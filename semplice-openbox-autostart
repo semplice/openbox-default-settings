@@ -122,7 +122,7 @@ $panel $panel_config &
 
 [ "$volcontrol" != "disabled" ] && $volcontrol
 
-[ -e "~/.config/.composite_enabled" ] && [ -x "/usr/bin/compton" ] && /usr/bin/compton -b
+[ -e ~/.config/.composite_enabled ] && [ -x /usr/bin/compton ] && /usr/bin/compton -b
 ) &
 
 xscreensaver &
