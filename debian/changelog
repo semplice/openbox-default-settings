@@ -1,3 +1,10 @@
+semplice-openbox-default-settings (3.99.4) unstable; urgency=low
+
+  * gtk*: set Faenza-Semplice as the default icon theme.
+  * debian/post{inst,rm}: Do not reload lightdm anymore.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 02 Mar 2013 19:40:37 +0100
+
 semplice-openbox-default-settings (3.99.3) unstable; urgency=low
 
   * Auto-launch compton if composite is enabled.
