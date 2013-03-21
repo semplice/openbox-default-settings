@@ -3,7 +3,7 @@
 #
 # Openbox autostart script for Semplice Linux.
 # You can freely remove it to use a clean openbox session.
-# (C) 2009-2012 The Semplice Linux Team. All rights reserved.
+# (C) 2009-2013 The Semplice Linux Team. All rights reserved.
 # Released under the terms of the GNU GPL v3 license (or later). See /usr/share/common-licenses/GPL.
 #
 
@@ -28,7 +28,7 @@ export interval="0.5"
 export conkyconf="disabled"
 
 # volume control, default is "volti" ("disabled" to disable)
-export volcontrol="volti"
+export volcontrol="volumeicon"
 
 # icons: set this variable to "y" to enable pcmanfm icons.
 # default is "n".

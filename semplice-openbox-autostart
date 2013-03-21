@@ -15,7 +15,7 @@ else
  pcmanfm_args="$pcmanfm_args"
 fi
 
-[ -z "$volcontrol" ] && volcontrol="volti"
+[ -z "$volcontrol" ] && volcontrol="volumeicon"
 [ -z "$conkyconf" ] && conkyconf="/etc/conky/semplice.conf"
 
 [ -z "$panel" ] && panel="tint2"
