@@ -29,7 +29,13 @@ remove() {
 		dpkg-divert --rename --package semplice-openbox-default-settings --divert "/etc/lightdm/lightdm-gtk-greeter.conf.distrib" --remove "/etc/lightdm/lightdm-gtk-greeter.conf"
 	fi
 	#invoke-rc.d lightdm reload
-	
+
+	# Restore chrome configurations
+	if [ -e "/etc/chromium/master_preferences.distrib" ]; then
+		rm -f /etc/chromium/master_preferences
+		dpkg-divert --rename --package semplice-openbox-default-settings --divert "/etc/chromium/master_preferences.distrib" --remove "/etc/chromium/master_preferences"
+	fi
+
 	# Update gconf defaults
 	if [ "`which update-gconf-defaults`" ]; then
 	 update-gconf-defaults

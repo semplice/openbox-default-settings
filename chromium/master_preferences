@@ -1,0 +1,32 @@
+{
+  "distribution": {
+     "skip_first_run_ui": true,
+     "make_chrome_default": false,
+     "make_chrome_default_for_user": false,
+     "create_all_shortcuts": true,
+     "show_welcome_page": false,
+     "oem_bubble": true
+  },
+  "browser": {
+     "custom_chrome_frame": false,
+     "show_home_button": false,
+     "check_default_browser" : false
+  },
+  "bookmark_bar": {
+     "show_on_all_tabs": false
+  },
+  "extensions": {
+     "theme": {
+         "id": "",
+         "use_system": true
+      }
+   },
+  "first_run_tabs" : [ 
+    "http://semplice-linux.org", 
+    "welcome_page",
+    "new_tab_page" 
+  ],
+  "homepage": "http://semplice-linux.org",
+  "homepage_is_newtabpage": true
+}
+

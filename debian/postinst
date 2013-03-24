@@ -29,6 +29,12 @@ configure() {
 	fi
 	#invoke-rc.d lightdm reload
 	
+	# Divert chrome configurations
+	if ! [ -e "/etc/chromium/master_preferences.distrib" ]; then
+		dpkg-divert --rename --package semplice-openbox-default-settings --divert "/etc/chromium/master_preferences.distrib" --add "/etc/chromium/master_preferences"
+		ln -s /usr/share/semplice-default-settings/chromium/master_preferences /etc/chromium/master_preferences
+	fi
+	
 	# Update gconf defaults
 	if [ "`which update-gconf-defaults`" ]; then
 	 update-gconf-defaults

@@ -47,6 +47,9 @@ clipit /etc/skel/.config
 # Lightdm
 lightdm/* /usr/share/semplice-default-settings/lightdm
 
+# Chromium
+chromium/* /usr/share/semplice-default-settings/chromium
+
 # PolicyKit rules
 #PolicyKit/52-allow-users-in-admin-group-to-use-policykit.conf /etc/polkit-1/localauthority.conf.d
 #PolicyKit/53-allow-users-in-sudo-group-to-use-policykit.conf /etc/polkit-1/localauthority.conf.d
