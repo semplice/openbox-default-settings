@@ -1,3 +1,10 @@
+semplice-openbox-default-settings (3.99.7) unstable; urgency=low
+
+  * semplice-openbox-autostart: start volume control in background.
+  * Added chromium preferences.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sun, 24 Mar 2013 17:17:01 +0100
+
 semplice-openbox-default-settings (3.99.6) unstable; urgency=low
 
   * Make volumeicon the default volume control.
