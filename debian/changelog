@@ -1,3 +1,9 @@
+semplice-openbox-default-settings (3.99.8) unstable; urgency=low
+
+  * lightdm.conf: ensure the autologin-user-timeout is set to 0.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sun, 24 Mar 2013 17:54:26 +0100
+
 semplice-openbox-default-settings (3.99.7) unstable; urgency=low
 
   * semplice-openbox-autostart: start volume control in background.
