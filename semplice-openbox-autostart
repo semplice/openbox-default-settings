@@ -120,7 +120,7 @@ fi
 $panel $panel_config &
 [ "$conkyconf" != "disabled" ] && conky --config $conkyconf &
 
-[ "$volcontrol" != "disabled" ] && $volcontrol
+[ "$volcontrol" != "disabled" ] && $volcontrol &
 
 [ -e ~/.config/.composite_enabled ] && [ -x /usr/bin/compton ] && /usr/bin/compton -b
 ) &
