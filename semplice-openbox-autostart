@@ -114,6 +114,7 @@ fi
 if [ -e "$HOME/.config/nitrogen/nitrogen.cfg.firststart" ]; then
  echo "dirs=$HOME/.config/nitrogen/add-wallpaper;/usr/share/backgrounds;" >> $HOME/.config/nitrogen/nitrogen.cfg.firststart
  mv $HOME/.config/nitrogen/nitrogen.cfg.firststart $HOME/.config/nitrogen/nitrogen.cfg
+ xrdb -merge ~/.Xresources # xscreensaver style
 fi
 
 # Start panel, conky, volume control and composite manager

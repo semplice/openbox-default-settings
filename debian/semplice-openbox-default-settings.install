@@ -40,6 +40,7 @@ gtkrc-2.0 /root
 gtk-3.0 /etc/skel/.config
 gtk-3.0 /root/.config
 xscreensaver /etc/skel
+Xresources /etc/skel
 #mimeapps.list /etc/skel/.local/share/applications
 volumeicon /etc/skel/.config
 clipit /etc/skel/.config
