@@ -15,7 +15,9 @@ else
  pcmanfm_args="$pcmanfm_args"
 fi
 
-[ -z "$volcontrol" ] && volcontrol="volumeicon"
+# Who needs volti? (volume control on Semplice 3.x or lower)
+# (if someone really needs it, just use the full executable path)
+[ -z "$volcontrol" ] || [ "$volcontrol" = "volti" ] && volcontrol="volumeicon"
 [ -z "$conkyconf" ] && conkyconf="/etc/conky/semplice.conf"
 
 [ -z "$panel" ] && panel="tint2"
