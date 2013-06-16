@@ -20,3 +20,4 @@ override_dh_install:
 	mv debian/semplice-openbox-default-settings/root/gtkrc-2.0 debian/semplice-openbox-default-settings/root/.gtkrc-2.0
 	#mv debian/semplice-openbox-default-settings/var/lib/gdm3/gtkrc-2.0 debian/semplice-openbox-default-settings/var/lib/gdm3/.gtkrc-2.0
 	mv debian/semplice-openbox-default-settings/etc/xdg/tint2/tint2rc debian/semplice-openbox-default-settings/etc/xdg/tint2/semplice.tint2rc
+	mv debian/semplice-openbox-default-settings/etc/xdg/tint2/classic.tint2rc debian/semplice-openbox-default-settings/etc/xdg/tint2/semplice-classic.tint2rc

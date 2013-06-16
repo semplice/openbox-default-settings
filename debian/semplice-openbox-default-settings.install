@@ -10,6 +10,7 @@ conky/conky-harddisks.sh /usr/share/semplice-default-settings/advanced
 
 # Panel stuff
 tint2rc /etc/xdg/tint2
+classic.tint2rc /etc/xdg/tint2
 
 # gsimplecal
 gsimplecal/ /etc/skel/.config
