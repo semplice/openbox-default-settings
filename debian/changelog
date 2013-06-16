@@ -1,3 +1,10 @@
+semplice-openbox-default-settings (4.70.1) devel; urgency=low
+
+  * lightdm: gtk-greeter: switch to dark theme and Faenza-Darkest.
+  * semplice-openbox-autostart: launch FM and set wallpaper ASAP.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sun, 16 Jun 2013 23:20:42 +0200
+
 semplice-openbox-default-settings (4.70.0) devel; urgency=low
 
   * tint2rc: shiny new panel config :)
