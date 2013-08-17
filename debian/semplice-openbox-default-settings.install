@@ -12,6 +12,9 @@ conky/conky-harddisks.sh /usr/share/semplice-default-settings/advanced
 tint2rc /etc/xdg/tint2
 classic.tint2rc /etc/xdg/tint2
 
+# fonts
+fonts/ /etc
+
 # gsimplecal
 gsimplecal/ /etc/skel/.config
 

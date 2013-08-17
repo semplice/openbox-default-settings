@@ -1,3 +1,4 @@
+/etc
 /etc/skel
 /etc/skel/.config
 /etc/skel/.config/openbox
