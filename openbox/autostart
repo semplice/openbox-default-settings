@@ -16,8 +16,8 @@ export checktouchpad="y"
 # Uncomment the following if you have problems with your touchpad, many thanks to Carmine Sorrentino <http://debianaro.posterous.com> for that!
 #export fixtouchpad="y"
 
-# interval for launch some applications (such as panel and volume control). Default is 2. (You can insert 0 to speed up login, if you have a good system):
-export interval="0.5"
+# interval for launch some applications (such as panel and volume control):
+export interval="0"
 
 ##############
 #### INTERFACE
@@ -27,7 +27,7 @@ export interval="0.5"
 #export conkyconf="/etc/conky/semplice.conf"
 export conkyconf="disabled"
 
-# volume control, default is "volti" ("disabled" to disable)
+# volume control, default is "volumeicon" ("disabled" to disable)
 export volcontrol="volumeicon"
 
 # icons: set this variable to "y" to enable pcmanfm icons.
