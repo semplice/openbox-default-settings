@@ -1,3 +1,9 @@
+semplice-openbox-default-settings (5.0.1) unstable; urgency=low
+
+  * openbox/autostart: set the interval to 0.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Mon, 02 Sep 2013 15:41:11 +0200
+
 semplice-openbox-default-settings (5.0.0) unstable; urgency=low
 
   * debian/gbp.conf: restored master configuration.
