@@ -1,3 +1,9 @@
+semplice-openbox-default-settings (5.0.2) unstable; urgency=low
+
+  * nitrogen: added default rules for multiple screens and multi-user environments
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Fri, 06 Sep 2013 20:46:17 +0200
+
 semplice-openbox-default-settings (5.0.1) unstable; urgency=low
 
   * openbox/autostart: set the interval to 0.
