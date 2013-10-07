@@ -18,6 +18,9 @@ fonts/ /etc
 # gsimplecal
 gsimplecal/ /etc/skel/.config
 
+# Terminal
+roxterm.sourceforge.net/ /etc/skel/.config
+
 # File Manager
 pcmanfm /etc/skel/.config
 libfm /etc/skel/.config
