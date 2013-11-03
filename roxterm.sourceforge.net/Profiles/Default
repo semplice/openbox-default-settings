@@ -1,5 +1,5 @@
 [roxterm profile]
 colour_scheme=Tango
-font=Droid Sans Mono 10
+font=Monospace 10
 background_type=0
 scroll_on_keystroke=1
