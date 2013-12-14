@@ -101,7 +101,7 @@ systray_icon_asb = 100 0 0
 
 # Clock
 time1_format = %H:%M
-time1_font = Open Sans Light 12
+time1_font = Open Sans 12
 clock_font_color = #FFFFFF 100
 clock_tooltip = %A %d %B %Y
 clock_padding = 0 0
