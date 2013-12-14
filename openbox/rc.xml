@@ -51,25 +51,25 @@
     <keepBorder>yes</keepBorder>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
-      <name>Droid Sans</name>
-      <size>10</size>
+      <name>Open Sans</name>
+      <size>9</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>normal</weight>
       <!-- 'bold' or 'normal' -->
       <slant>normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>Droid Sans</name>
-      <size>10</size>
+      <name>Open Sans</name>
+      <size>9</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>normal</weight>
       <!-- 'bold' or 'normal' -->
       <slant>normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>Droid Sans</name>
+      <name>Open Sans</name>
       <size>9</size>
       <!-- font size in points -->
       <weight>normal</weight>
@@ -78,7 +78,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>Droid Sans</name>
+      <name>Open Sans</name>
       <size>9</size>
       <!-- font size in points -->
       <weight>normal</weight>
@@ -86,11 +86,20 @@
       <slant>normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
-    <font place="OnScreenDisplay">
-      <name>Droid Sans</name>
+    <font place="ActiveOnScreenDisplay">
+      <name>Open Sans</name>
       <size>9</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>normal</weight>
+      <!-- 'bold' or 'normal' -->
+      <slant>normal</slant>
+      <!-- 'italic' or 'normal' -->
+    </font>
+    <font place="InactiveOnScreenDisplay">
+      <name>Open Sans</name>
+      <size>9</size>
+      <!-- font size in points -->
+      <weight>normal</weight>
       <!-- 'bold' or 'normal' -->
       <slant>normal</slant>
       <!-- 'italic' or 'normal' -->
@@ -352,7 +361,24 @@
         <action name="Raise"/>
       </mousebind>
       <mousebind button="Left" action="Drag">
-        <action name="Move"/>
+        <!-- Unsnap if snapped-->
+        <action name="if">
+          <maximizedvertical>yes</maximizedvertical>
+          <then>
+            <action name="Unmaximize"/>
+              <direction>vertical</direction>
+            <action name="MoveResizeTo">
+              <x>center</x>
+              <!-- we center windows in order to mitigate discrepancies 
+              between window placement and mouse cursor -->
+              <y>current</y>
+            </action>
+            <action name="Move"/>
+          </then>
+          <else>
+            <action name="Move"/>
+          </else>
+        </action>
       </mousebind>
       <mousebind button="Left" action="DoubleClick">
         <action name="ToggleMaximizeFull"/>

@@ -27,6 +27,8 @@ pcmanfm -d $pcmanfm_args &
 [ -z "$volcontrol" ] || [ "$volcontrol" = "volti" ] && volcontrol="volumeicon"
 [ -z "$conkyconf" ] && conkyconf="/etc/conky/semplice.conf"
 
+[ -z "$snap" ] && snap="y"
+
 [ -z "$panel" ] && panel="tint2"
 # $panel_config can be blank.
 
@@ -112,6 +114,11 @@ if [ "$fixtouchpad" = "y" ]; then
 	synclient VertTwoFingerScroll=1
 	synclient HorizTwoFingerScroll=1
 	synclient VertEdgeScroll=1
+fi
+
+# Window Snap
+if [ "$snap" = "y" ] && [ -e "/usr/bin/opensnap" ]; then
+	/usr/bin/opensnap --daemon -c /etc/opensnap
 fi
 
 # Set nitrogen config...
