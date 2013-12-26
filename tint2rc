@@ -52,6 +52,13 @@ wm_menu = 1
 panel_layer = top
 panel_background_id = 1
 
+# Launchers
+# By default launchers are disabled, use /usr/bin/tint2-panel-config to enable them
+launcher_tooltip = 1
+launcher_padding = 2 0 2
+launcher_background_id = 0
+launcher_icon_size = 32
+
 # Panel Autohide
 autohide = 0
 autohide_show_timeout = 0
