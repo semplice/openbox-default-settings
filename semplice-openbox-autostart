@@ -136,6 +136,7 @@ if [ -e "$HOME/.config/nitrogen/nitrogen.cfg.firststart" ]; then
 	mkdir -p ~/.config/tint2
 	cat >> ~/.config/tint2/secondary_config <<EOF
 time1_format = %I:%M %p
+panel_items = TSBC
 EOF
  fi
 fi
