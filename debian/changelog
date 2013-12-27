@@ -1,3 +1,9 @@
+semplice-openbox-default-settings (5.20.4) devel; urgency=low
+
+  * Minor bugfix.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Fri, 27 Dec 2013 01:10:54 +0100
+
 semplice-openbox-default-settings (5.20.3) devel; urgency=low
 
   * semplice-openbox-autostart: set localized time1_format if needed.
