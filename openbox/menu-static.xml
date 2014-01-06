@@ -6,25 +6,16 @@
                 file:///usr/share/openbox/menu.xsd">
 
 <menu id="root-menu" label="Openbox 3">
-  <separator label="Semplice"></separator>
+  <separator label="Semplice (static)"></separator>
   <item label="Terminal emulator">
     <action name="Execute"><execute>x-terminal-emulator</execute></action>
   </item>
   <item label="Web browser">
     <action name="Execute"><execute>x-www-browser</execute></action>
   </item>
-  <!-- This requires the presence of the 'menu' package to work -->
-  <!-- <menu id="Debian" label="Applications" /> --> <!-- Uncomment the menu to use the Debian menu method, more faster :) -->
-  <separator />
-  <menu id="apps" label="Applications" execute="/usr/share/semplice-default-settings/advanced/xdg-menu.py applications" /> <!-- The first time may be slower, if is always slower, comment this code and uncomment the above. -->
-  <menu id="places" label="Places" execute="/usr/share/semplice-default-settings/advanced/places.sh" />
-  <menu id="settings" label="Settings" execute="/usr/share/semplice-default-settings/advanced/xdg-menu.py settings" /> <!-- same as two lines above. -->
   <separator />
   <menu id="client-list-menu" />
   <separator />
-  <item label="About Semplice...">
-    <action name="Execute"><execute>semplice-about</execute></action>
-  </item>
   <menu id="appearance" label="Appearance">
   	<menu id="wallpaper" label="Wallpaper">
   		<item label="Add">
@@ -33,23 +24,18 @@
   		<item label="Manage">
   			<action name="Execute"><execute>nitrogen</execute></action>
   		</item>
-  	</menu> <!-- As of Beta1 - obconf is integrated in lxappearance 
-  	<item label="Openbox configuration manager">
-  		<action name="Execute"><execute>obconf</execute></action>
-  	</item> -->
-  	<item label="GTK+ theme selector">
+  	</menu>
+    <separator />
+  	<item label="Appearance settings">
   		<action name="Execute"><execute>lxappearance</execute></action>
   	</item>
   </menu>
+  <separator />
+  <item label="About Semplice...">
+    <action name="Execute"><execute>semplice-about</execute></action>
+  </item>
+  <separator />
   <menu id="exit" label="End Session">
-  	<menu id="exit_openbox" label="Openbox">
-  		<item label="Reconfigure">
-  			<action name="Reconfigure" />
-  		</item>
-  		<item label="Restart Session">
-  			<action name="Restart" />
-  		</item>
-  	</menu>
   	<item label="Lock Screen">
   		<action name="Execute"><execute>semplice-logout --lock</execute></action>
   	</item>
@@ -74,6 +60,13 @@
   		<action name="Execute"><execute>semplice-logout --reboot</execute></action>
   	</item>
   </menu>
+  <separator />
+  <item label="Uh oh. We were unable to load the full menu.">
+    <action name="Execute">
+        <prompt>You are running Semplice's fallback menu. This means that for some reason the system has been unable to enable the normal menu.
+We are sorry for that. Do you want to open the Semplice forums to get help?</prompt>
+        <execute>x-www-browser http://semplice-linux.org/community</execute></action>
+  </item>
 </menu>
 
 </openbox_menu>
