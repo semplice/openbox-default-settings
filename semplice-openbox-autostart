@@ -47,7 +47,7 @@ fi
 
 if [ "$LIVEMODE" ]; then # The code below permits to resolve a "bug" in the live session in build 40 and higher.
 	. /etc/default/keyboard
-	if [[ "$XKBMODEL" ]]; then
+	if [ "$XKBMODEL" ]; then
 		setxkbmap $XKBLAYOUT -model $XKBMODEL
 	else
 		setxkbmap $XKBLAYOUT
