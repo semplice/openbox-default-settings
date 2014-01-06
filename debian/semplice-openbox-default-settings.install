@@ -33,6 +33,7 @@ gconf/* /usr/share/gconf/defaults
 
 # Xfce4 applications settings
 xfce4 /etc/skel/.config
+xfce4 /root/.config
 
 # Nitrogen
 nitrogen /etc/skel/.config
