@@ -1,3 +1,12 @@
+semplice-openbox-default-settings (5.90.0) devel; urgency=low
+
+  * openbox/: removed old scripts (Semplice 1.0 era)
+  * openbox/: use the menu-static by default. alan-watcher will setup alan2 automatically at the first start.
+  * Install notifyd configuration also to /root/.config.
+  * Properly install fonts config.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Mon, 06 Jan 2014 13:34:12 +0100
+
 semplice-openbox-default-settings (5.20.4) devel; urgency=low
 
   * Minor bugfix.
