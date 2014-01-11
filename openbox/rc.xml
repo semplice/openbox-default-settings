@@ -289,6 +289,21 @@
        <execute>gmrun</execute>
       </action>
      </keybind>
+    <keybind key="W-t">
+      <action name="Execute">
+        <execute>roxterm</execute>
+      </action>
+    </keybind>
+    <keybind key="W-m">
+      <action name="Execute">
+        <execute>gnome-mplayer</execute>
+      </action>
+    </keybind>
+    <keybind key="W-r">
+      <action name="Execute">
+        <execute>openbox --reconfigure</execute>
+      </action>
+    </keybind>
     <!-- Keybindings for multimedia keys -->
     <keybind key="XF86AudioNext">
       <action name="Execute">
