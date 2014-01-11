@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #
 # Openbox autostart script for Semplice Linux.
@@ -21,6 +21,10 @@ export interval="0"
 
 ##############
 #### INTERFACE
+
+# window snap feature, default is "y".
+# set the following variable to "n" to diable.
+export snap="y"
 
 # conky configuration file, default is "/etc/conky/semplice.conf"
 # set to "disabled" to disable conky.

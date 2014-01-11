@@ -1,3 +1,45 @@
+semplice-openbox-default-settings (5.90.0) devel; urgency=low
+
+  * openbox/: removed old scripts (Semplice 1.0 era)
+  * openbox/: use the menu-static by default. alan-watcher will setup alan2 automatically at the first start.
+  * Install notifyd configuration also to /root/.config.
+  * Properly install fonts config.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Mon, 06 Jan 2014 13:34:12 +0100
+
+semplice-openbox-default-settings (5.20.4) devel; urgency=low
+
+  * Minor bugfix.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Fri, 27 Dec 2013 01:10:54 +0100
+
+semplice-openbox-default-settings (5.20.3) devel; urgency=low
+
+  * semplice-openbox-autostart: set localized time1_format if needed.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Thu, 26 Dec 2013 20:48:37 +0100
+
+semplice-openbox-default-settings (5.20.2) devel; urgency=low
+
+  * tint2rc: plumbing for launcher support.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Thu, 26 Dec 2013 17:22:41 +0100
+
+semplice-openbox-default-settings (5.20.1) devel; urgency=low
+
+  * Use Open Sans for Clock.
+  * Added Window Snap feature (requires opensnap).
+  * Some fixes.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 14 Dec 2013 19:39:27 +0100
+
+semplice-openbox-default-settings (5.20.0) devel; urgency=low
+
+  * Switched to Open Sans.
+  * Hey, we are on devel! ;)
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sun, 03 Nov 2013 14:06:18 +0100
+
 semplice-openbox-default-settings (5.0.4) unstable; urgency=low
 
   * roxterm: do not use transparency.
