@@ -279,13 +279,9 @@
       </action>
     </keybind>
     <!-- Keybindings for running applications -->
-    <keybind key="W-e">
+    <keybind key="W-f">
       <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>Konqueror</name>
-        </startupnotify>
-        <command>kfmclient openProfile filemanagement</command>
+        <execute>pcmanfm</execute>
       </action>
     </keybind>
      <keybind key="A-F2">
@@ -293,6 +289,42 @@
        <execute>gmrun</execute>
       </action>
      </keybind>
+    <keybind key="W-t">
+      <action name="Execute">
+        <execute>roxterm</execute>
+      </action>
+    </keybind>
+    <keybind key="W-m">
+      <action name="Execute">
+        <execute>gnome-mplayer</execute>
+      </action>
+    </keybind>
+    <keybind key="W-r">
+      <action name="Execute">
+        <execute>openbox --reconfigure</execute>
+      </action>
+    </keybind>
+    <!-- Keybindings for multimedia keys -->
+    <keybind key="XF86AudioNext">
+      <action name="Execute">
+        <execute>exaile --next</execute>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioPrev">
+      <action name="Execute">
+        <execute>exaile --prev</execute>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioPlay">
+      <action name="Execute">
+        <execute>exaile --play-pause</execute>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioStop">
+      <action name="Execute">
+        <execute>exaile --stop</execute>
+      </action>
+    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>8</dragThreshold>
