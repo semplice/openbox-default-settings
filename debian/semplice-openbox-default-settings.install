@@ -1,6 +1,6 @@
 # Openbox stuff
 openbox/autostart /etc/skel/.config/openbox
-openbox/menu.xml /etc/skel/.config/openbox
+openbox/menu-static.xml /etc/skel/.config/openbox
 openbox/rc.xml /etc/skel/.config/openbox
 
 # Conky stuff
