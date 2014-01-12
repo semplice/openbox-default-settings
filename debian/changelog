@@ -1,3 +1,15 @@
+semplice-openbox-default-settings (5.90.1) devel; urgency=low
+
+  [ vinzv ]
+  * added multimedia key bindings for Exaile
+  * there's no konqueror in semplice but pcmanfm
+  * roxterm, gnome-mplayer and openbox --reconfigure keybindings, similar to crunchbang
+
+  [ Eugenio Paolantonio (g7) ]
+  * Ship menu-static.xml
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sun, 12 Jan 2014 17:00:16 +0100
+
 semplice-openbox-default-settings (5.90.0) devel; urgency=low
 
   * openbox/: removed old scripts (Semplice 1.0 era)
