@@ -2,6 +2,7 @@
 openbox/autostart /etc/skel/.config/openbox
 openbox/menu-static.xml /etc/skel/.config/openbox
 openbox/rc.xml /etc/skel/.config/openbox
+openbox/fix_snapping.py /usr/share/semplice-default-settings
 
 # Conky stuff
 conky/semplice.conf /etc/conky

@@ -117,6 +117,13 @@ if [ "$fixtouchpad" = "y" ]; then
 	synclient VertEdgeScroll=1
 fi
 
+# (Semplice 6): Ensure we properly configure snapping in openbox
+if [ ! -e "~/.config/openbox/.snapupgrade" ]; then
+	/usr/share/semplice-default-settings/fix_snapping.py
+	openbox --reconfigure
+fi
+		
+
 # Window Snap
 if [ "$snap" = "y" ] && [ -e "/usr/bin/opensnap" ]; then
 	/usr/bin/opensnap --daemon -c /etc/opensnap
