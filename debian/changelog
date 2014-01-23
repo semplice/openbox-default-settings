@@ -1,3 +1,9 @@
+semplice-openbox-default-settings (5.90.2) devel; urgency=low
+
+  * openbox/fix_snapping.py: added (fixes snapping in rc.xml)
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Thu, 23 Jan 2014 16:13:53 +0100
+
 semplice-openbox-default-settings (5.90.1) devel; urgency=low
 
   [ vinzv ]
