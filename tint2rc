@@ -62,7 +62,7 @@ launcher_icon_size = 32
 # Panel Autohide
 autohide = 0
 autohide_show_timeout = 0
-autohide_hide_timeout = 4
+autohide_hide_timeout = 0
 autohide_height = 10
 strut_policy = follow_size
 
