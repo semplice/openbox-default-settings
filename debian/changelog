@@ -1,3 +1,9 @@
+semplice-openbox-default-settings (6.0.1) unstable; urgency=medium
+
+  * updated tint2rc
+
+ -- Giuseppe Corti <giuseppe@infiniteloop.pro>  Mon, 03 Feb 2014 01:09:26 +0100
+
 semplice-openbox-default-settings (6.0.0) unstable; urgency=low
 
   * Semplice 6 release.
