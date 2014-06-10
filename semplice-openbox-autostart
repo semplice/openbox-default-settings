@@ -14,13 +14,14 @@ if [ "$icons" = "y" ]; then
 else
  pcmanfm_args="$pcmanfm_args"
 fi
+[ -z "$disablewallpaper" ] && disablewallpaper="n"
 
 # Workaround to get 'Applications' bookmark work in pcmanfm
 export XDG_MENU_PREFIX="semplice-"
 
 # File Manager
 pcmanfm -d $pcmanfm_args &
-[ "$icons" = "n" ] && nitrogen --restore # If no icons, set wallpaper ourself.
+[ "$icons" = "n" ] && [ "$disablewallpaper" != "y" ] && nitrogen --restore # If no icons, set wallpaper ourselves.
 
 # Who needs volti? (volume control on Semplice 3.x or lower)
 # (if someone really needs it, just use the full executable path)

@@ -34,6 +34,10 @@ export conkyconf="disabled"
 # volume control, default is "volumeicon" ("disabled" to disable)
 export volcontrol="volumeicon"
 
+# disablewallpaper: set this variable to 'y' to disable the wallpaper.
+# default is "n".
+export disablewallpaper="n"
+
 # icons: set this variable to "y" to enable pcmanfm icons.
 # default is "n".
 export icons="n"
