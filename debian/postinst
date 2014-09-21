@@ -37,6 +37,11 @@ configure() {
 	    sed -e '/greeter-session/ s/^#*/#/' -i /etc/lightdm/lightdm.conf
 	    touch /etc/lightdm/lightdm.conf.20140919sempliceupgrade
 	fi
+	if ! [ -e "/etc/lightdm/lightdm.conf.20140921sempliceupgrade" ]; then
+	    sed -e '/session-wrapper/ s/^#*/#/' -i /etc/lightdm/lightdm.conf
+	    sed -e '/user-session/ s/^#*/#/' -i /etc/lightdm/lightdm.conf
+	    touch /etc/lightdm/lightdm.conf.20140921sempliceupgrade
+	fi
 	
 	# Divert chrome configurations
 	if ! [ -e "/etc/chromium/master_preferences.distrib" ]; then

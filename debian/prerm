@@ -31,6 +31,9 @@ remove() {
 	if [ -e "/etc/lightdm/lightdm.conf.20140919sempliceupgrade" ]; then
 	    rm -f /etc/lightdm/lightdm.conf.20140919sempliceupgrade
 	fi
+	if [ -e "/etc/lightdm/lightdm.conf.20140921sempliceupgrade" ]; then
+	    rm -f /etc/lightdm/lightdm.conf.20140921sempliceupgrade
+	fi
 
 	# Restore chrome configurations
 	if [ -e "/etc/chromium/master_preferences.distrib" ]; then
