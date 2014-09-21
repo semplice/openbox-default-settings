@@ -27,7 +27,21 @@ configure() {
 		dpkg-divert --rename --package semplice-openbox-default-settings --divert "/etc/lightdm/lightdm-gtk-greeter.conf.distrib" --add "/etc/lightdm/lightdm-gtk-greeter.conf"
 		cp /usr/share/semplice-default-settings/lightdm/lightdm-gtk-greeter.conf /etc/lightdm
 	fi
-	#invoke-rc.d lightdm reload
+	
+	# A recent LightDM upgrade (2014-09-17), doesn't start with an old
+	# greeter-session setting.
+	# While this is already fixed for the users who haven't modified
+	# their ligthdm.conf, we need to ensure that that particular setting
+	# is commented out for those who did :)
+	if ! [ -e "/etc/lightdm/lightdm.conf.20140919sempliceupgrade" ]; then
+	    sed -e '/greeter-session/ s/^#*/#/' -i /etc/lightdm/lightdm.conf
+	    touch /etc/lightdm/lightdm.conf.20140919sempliceupgrade
+	fi
+	if ! [ -e "/etc/lightdm/lightdm.conf.20140921sempliceupgrade" ]; then
+	    sed -e '/session-wrapper/ s/^#*/#/' -i /etc/lightdm/lightdm.conf
+	    sed -e '/user-session/ s/^#*/#/' -i /etc/lightdm/lightdm.conf
+	    touch /etc/lightdm/lightdm.conf.20140921sempliceupgrade
+	fi
 	
 	# Divert chrome configurations
 	if ! [ -e "/etc/chromium/master_preferences.distrib" ]; then
