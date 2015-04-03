@@ -167,3 +167,8 @@ xdg-autostart GNOME XFCE LXDE # XFCE is needed for xfce4-power manager, LXDE for
 
 # And tell the user that all is OK! ;)
 #notify-send -i config-users "Successfully logged in" "Welcome to your Semplice desktop, $USER!"
+
+# Show legacy dialog if we should
+if [ -x /usr/bin/vera-session ] && [ ! -e ~/.config/.semplice-legacy-dialog-shown ]; then
+	/usr/share/semplice-default-settings/semplice-legacy-dialog.py
+fi

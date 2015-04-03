@@ -9,6 +9,7 @@ Homepage: http://semplice-linux.org
 Package: semplice-openbox-default-settings
 Architecture: all
 Pre-Depends: bash, lightdm, lightdm-gtk-greeter
+Depends: python, python-gi, gir1.2-gtk-3.0, python-quickstart
 Description: Semplice Openbox System Default Settings
  This package contains the default settings for the
  Semplice Openbox System.
